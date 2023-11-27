@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      #registerButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #registerForm {
+        display: none;
+      }
+    </style>
+  </head>
+  <body background="bckg.jpg">
+    <h2>Selamat datang di halaman pendaftaran</h2>
+
+    <button id="registerButton">Daftar</button>
+
+    <div id="registerForm">
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" name="newUsername" required />
+      <br />
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" name="newPassword" required />
+      <br />
+      <button id="submitRegistration">Submit</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("registerButton")
+        .addEventListener("click", function () {
+          document.getElementById("registerForm").style.display = "block";
+        });
+
+      document
+        .getElementById("submitRegistration")
+        .addEventListener("click", function () {
+          var newUsername = document.getElementById("newUsername").value;
+          var newPassword = document.getElementById("newPassword").value;
+
+          // Lakukan proses pendaftaran di sini, contoh sederhana:
+          alert("Pendaftaran berhasil untuk username: " + newUsername);
+        });
+    </script>
+  </body>
+</html>

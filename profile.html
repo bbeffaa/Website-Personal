@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      #profileButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Selamat datang di halaman profil</h2>
+
+    <button id="profileButton" onclick="openProfilePage()">Profile</button>
+
+    <script>
+      function openProfilePage() {
+        // Ganti URL di bawah sesuai dengan laman profil menarik
+        var profileURL = "https://lamongankab.go.id/artikel/44";
+
+        // Buka laman di jendela/tab baru
+        window.open(profileURL, "_blank");
+      }
+    </script>
+  </body>
+</html>

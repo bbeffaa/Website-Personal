@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      #locationButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2></h2>
+
+    <button id="locationButton" onclick="openLocationPage()">Location</button>
+
+    <script>
+      function openLocationPage() {
+        // Ganti URL di bawah sesuai dengan laman informasi Kabupaten Lamongan, Jawa Timur
+        var locationURL = "https://maps.app.goo.gl/iwzm2JvSfpvKLEWN7";
+
+        // Buka laman di jendela/tab baru
+        window.open(locationURL, "_blank");
+      }
+    </script>
+  </body>
+</html>

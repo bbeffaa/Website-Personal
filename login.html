@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      #loginButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Selamat datang di halaman login</h2>
+
+    <button id="loginButton">Login</button>
+
+    <div id="loginForm" style="display: none">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br />
+      <button id="submitLogin">Submit</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginButton")
+        .addEventListener("click", function () {
+          document.getElementById("loginForm").style.display = "block";
+        });
+
+      document
+        .getElementById("submitLogin")
+        .addEventListener("click", function () {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          // Lakukan verifikasi login di sini, contoh sederhana:
+          if (username === "user" && password === "pass") {
+            alert("Login berhasil!");
+          } else {
+            alert("Login gagal. Coba lagi.");
+          }
+        });
+    </script>
+  </body>
+</html>
